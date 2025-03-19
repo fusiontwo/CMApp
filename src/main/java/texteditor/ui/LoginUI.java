@@ -22,14 +22,12 @@ public class LoginUI extends JFrame {
         setLocation(200, 200);
         setLayout(new BorderLayout());
 
-        // FlatLaf 테마 적용
         try {
             UIManager.setLookAndFeel(new com.formdev.flatlaf.FlatIntelliJLaf());
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        // 🔹 메인 패널
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
@@ -39,13 +37,11 @@ public class LoginUI extends JFrame {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(10, 10, 10, 10);
 
-        // 🔹 제목 (아이디/패스워드 위에 배치)
         JLabel titleLabel = new JLabel("KU 공유 텍스트 편집기", SwingConstants.CENTER);
         titleLabel.setFont(new Font("SansSerif", Font.BOLD, 32)); // 🔹 크기 키움
         titleLabel.setForeground(Color.WHITE);
         titleLabel.setBorder(BorderFactory.createEmptyBorder(0, 0, 20, 0));
 
-        // 아이디 필드
         JLabel usernameLabel = new JLabel("아이디");
         usernameLabel.setForeground(Color.WHITE);
         usernameField = new JTextField(15);
@@ -55,7 +51,6 @@ public class LoginUI extends JFrame {
                 BorderFactory.createEmptyBorder(5, 5, 5, 5)
         ));
 
-        // 비밀번호 필드
         JLabel passwordLabel = new JLabel("비밀번호");
         passwordLabel.setForeground(Color.WHITE);
         passwordField = new JPasswordField(15);
@@ -65,7 +60,6 @@ public class LoginUI extends JFrame {
                 BorderFactory.createEmptyBorder(5, 5, 5, 5)
         ));
 
-        // 로그인 버튼
         loginButton = new JButton("로그인");
         loginButton.setForeground(Color.WHITE);
         loginButton.setBackground(new Color(30, 144, 255)); // Royal Blue
@@ -92,7 +86,6 @@ public class LoginUI extends JFrame {
             }
         });
 
-        // 🔹 UI 배치 (타이틀 추가 후 아이디/비번 배치)
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = 2;

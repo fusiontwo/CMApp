@@ -25,26 +25,22 @@ public class ClientStatusUI2 extends JFrame {
         setLocation(900,100);
         setLayout(new BorderLayout());
 
-        // FlatLaf 테마 적용
         try {
             UIManager.setLookAndFeel(new com.formdev.flatlaf.FlatIntelliJLaf());
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        // 메인 패널
         JPanel mainPanel = new JPanel(new GridLayout(1, 2));
         mainPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
         mainPanel.setBackground(new Color(50, 50, 50));
 
-        // 왼쪽 패널 (큰 텍스트 필드)
         JTextArea largeTextArea = new JTextArea();
         largeTextArea.setFont(new Font("SansSerif", Font.PLAIN, 16));
         largeTextArea.setBackground(Color.WHITE);
         largeTextArea.setForeground(Color.WHITE);
         JScrollPane textScrollPane = new JScrollPane(largeTextArea);
 
-        // 오른쪽 패널 (사용자 출입창)
         JPanel userPanel = new JPanel(new BorderLayout());
         userPanel.setBackground(new Color(50, 50, 50));
 

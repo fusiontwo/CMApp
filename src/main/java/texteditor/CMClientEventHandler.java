@@ -51,7 +51,6 @@ public class CMClientEventHandler implements CMAppEventHandler {
                 System.out.println(event.getUserName() + " 님이 접속하셨습니다.");
                 onlineUsers.add(event.getUserName());
 
-                // 현재 클라이언트 이후에 접속한 사람만 필터링하여 UI 업데이트
                 List<String> filteredUsers = new ArrayList<>();
                 boolean includeUser = false;
                 for (String user : onlineUsers) {
@@ -76,7 +75,6 @@ public class CMClientEventHandler implements CMAppEventHandler {
                 System.out.println(event.getUserName() + " 님이 퇴장하셨습니다.");
                 onlineUsers.remove(event.getUserName());
 
-                // 리스트 업데이트 후 필터링하여 UI 갱신
                 List<String> updatedFilteredUsers = new ArrayList<>();
                 boolean stillIncludeUser = false;
                 for (String user : onlineUsers) {
