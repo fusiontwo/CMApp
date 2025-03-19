@@ -16,7 +16,7 @@ public class CMClientEventHandler implements CMAppEventHandler {
     private final CMClientStub clientStub;
     private JFrame statusUI;
     private List<String> onlineUsers;
-    private String myUserName; // 현재 클라이언트 사용자명
+    private String myUserName;
 
     public CMClientEventHandler(CMClientStub clientStub) {
         this.clientStub = clientStub;

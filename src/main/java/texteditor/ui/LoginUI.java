@@ -17,7 +17,7 @@ public class LoginUI extends JFrame {
     public LoginUI(CMClientApp clientApp) {
         this.clientApp = clientApp;
         setTitle("KU 공유 텍스트 편집기 - 로그인 (클라이언트 1)");
-        setSize(500, 400); // 창 크기 조정 (더 컴팩트하게)
+        setSize(500, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocation(200, 200);
         setLayout(new BorderLayout());
@@ -31,14 +31,14 @@ public class LoginUI extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-        panel.setBackground(new Color(45, 45, 45)); // 다크 모드 배경
+        panel.setBackground(new Color(45, 45, 45));
 
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(10, 10, 10, 10);
 
         JLabel titleLabel = new JLabel("KU 공유 텍스트 편집기", SwingConstants.CENTER);
-        titleLabel.setFont(new Font("SansSerif", Font.BOLD, 32)); // 🔹 크기 키움
+        titleLabel.setFont(new Font("SansSerif", Font.BOLD, 32));
         titleLabel.setForeground(Color.WHITE);
         titleLabel.setBorder(BorderFactory.createEmptyBorder(0, 0, 20, 0));
 
@@ -62,11 +62,11 @@ public class LoginUI extends JFrame {
 
         loginButton = new JButton("로그인");
         loginButton.setForeground(Color.WHITE);
-        loginButton.setBackground(new Color(30, 144, 255)); // Royal Blue
+        loginButton.setBackground(new Color(30, 144, 255));
         loginButton.setOpaque(true);
         loginButton.setBorderPainted(false);
         loginButton.setFont(new Font("SansSerif", Font.BOLD, 16));
-        loginButton.setPreferredSize(new Dimension(150, 40)); // 🔹 버튼 크기 증가
+        loginButton.setPreferredSize(new Dimension(150, 40));
 
         loginButton.addActionListener(new ActionListener() {
             @Override
@@ -89,7 +89,7 @@ public class LoginUI extends JFrame {
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = 2;
-        panel.add(titleLabel, gbc); // 🔹 제목 추가
+        panel.add(titleLabel, gbc);
 
         gbc.gridwidth = 1;
         gbc.gridx = 0;
